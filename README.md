@@ -1,2 +1,4 @@
 # Exercises-Java
- Exercises
+ Exercises Code/swing
+ 
+ one JavaFX project with Netbeans IDE.
