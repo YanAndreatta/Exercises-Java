@@ -19,6 +19,24 @@ public class Testador {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+          Scanner tc = new Scanner(System.in);
+        System.out.println("Ano: ");
+        int a = tc.nextInt();
+        System.out.println("Mês: ");
+        int m = tc.nextInt();
+        System.out.println("Dias: ");
+        int d = tc.nextInt();
+        
+        //int ano = 365;
+        //int meses = 30;
+       // int dias = 0;
+        
+        int calc = (a*365) + (m*30) + (d);
+        
+        //System.out.print(a);
+        //System.out.print(m);
+        //System.out.print(d);
+        System.out.println("Total de Dias que você viveu: " + calc);
       
     }
 }
