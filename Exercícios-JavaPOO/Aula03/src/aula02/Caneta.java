@@ -11,6 +11,7 @@ public class Caneta {
     private float ponta;
     protected int carga;
     private boolean tampada;
+    
     public void status(){
         System.out.println("Modelo: " + this.modelo);
         System.out.println("Uma caneta " + this.cor);
