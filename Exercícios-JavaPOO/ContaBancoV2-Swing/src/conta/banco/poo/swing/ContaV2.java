@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package contabanco;
+package conta.banco.poo.swing;
 
 import javax.swing.JOptionPane;
 
@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author yandu
  */
-public final class Conta {
+public final class ContaV2 {
     public int numConta;
     protected String tipo;
     private String dono;
@@ -19,8 +19,8 @@ public final class Conta {
     private boolean status;
     
 
-    public Conta() {        // Constructor
-        this.saldo = 0f;
+    public ContaV2() {        // Constructor
+        this.saldo = 0.0f;
         this.status = false;
     }
 
@@ -130,16 +130,14 @@ public final class Conta {
     }
     
     public void extratoConta(){
-        JOptionPane.showMessageDialog(null, "<html>Tipo da conta: " + this.getTipo() + "<br>Número da conta: " + 
-        this.getNumConta() + "<br>Dono da conta: " + this.getDono() + "<br>Estado da conta: "
-        + this.Status() + "<br>Saldo da conta: " + this.getSaldo() + "</br></html>");
-        
-        /*System.out.println(tipo);
-        *System.out.println(numConta);
-        *System.out.println(dono);
-        *System.out.println(status);
-        *System.out.println(saldo);
-        */
+        JOptionPane.showMessageDialog(null, "<html>Tipo da conta: " + tipo + "<br>Número da conta: " + numConta + "<br>Dono da conta: " + dono + "<br>Estado da conta: "
+                + this.Status() + "<br>Saldo conta: " );
+        System.out.println(tipo);
+        System.out.println(numConta);
+        System.out.println(dono);
+        System.out.println(status);
+        System.out.println(saldo);
+    
     }
     
 }
