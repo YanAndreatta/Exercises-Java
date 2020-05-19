@@ -116,7 +116,7 @@ public final class Conta {
     
     public void depositar(float valor){
         if(this.isStatus() == true){
-            this.setSaldo(getSaldo() - valor); //this.saldo += valor; 
+            this.setSaldo(getSaldo() + valor); //this.saldo += valor; 
         } else {
             System.out.println("Para você depositar você precisa abrir a conta!");
         }
