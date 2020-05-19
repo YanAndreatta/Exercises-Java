@@ -15,12 +15,12 @@ public final class Conta {
     public int numConta;
     protected String tipo;
     private String dono;
-    private float saldo;
+    private double saldo;
     private boolean status;
     
 
     public Conta() {        // Constructor
-        this.saldo = 0f;
+        this.saldo = 0.0f;
         this.status = false;
     }
 
@@ -48,23 +48,14 @@ public final class Conta {
         this.dono = dono;
     }
 
-    public float getSaldo() {
+    public double getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(float saldo) {
+    public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-    
-    public void getStatus() {
-        if(status == true){
-            System.out.println("Conta aberta");  
-        } else {
-            System.out.println("Conta fechada");   
-        }   
-    }
-
-    
+  
     public String Status(){
         if (this.isStatus() == true){
             String a = "Conta Aberta";
@@ -85,11 +76,18 @@ public final class Conta {
     } 
     
     public void pagarMensal(){
-        if("cc".equals(this.getTipo())){ // this.tipo == "cc"; || this.getTipo() == "cc";
-           this.setSaldo(getSaldo() - 20); // this.saldo -= 12;
-        } else if ("cp".equals(this.getTipo())){ // this.tipo == "cp";
-            this.setSaldo(getSaldo() - 20); // this.saldo -= 20;
+        if("cc".equals(this.getTipo()) && this.getSaldo() >= 12){ // this.tipo == "cc"; || this.getTipo() == "cc";
+           this.setSaldo(getSaldo() - 12); // this.saldo -= 12;
+           JOptionPane.showMessageDialog(null, "Sua mensalidade foi paga com sucesso!");        
+        } else if ("cc".equals(this.getTipo()) && this.getSaldo() < 12){
+          JOptionPane.showMessageDialog(null, "Você precisa ter saldo de no mínimo 12!");
         }
+        if (this.getTipo() == "cp" && this.getSaldo() >= 20){ // this.tipo == "cp";
+            this.setSaldo(getSaldo() - 20); // this.saldo -= 20;
+            JOptionPane.showMessageDialog(null, "Sua mensalidade foi paga com sucesso!");
+        } else if("cp".equals(this.getTipo()) && this.getSaldo() < 20){
+            JOptionPane.showMessageDialog(null, "Você precisa ter saldo de no mínimo 20!");
+            }    
     }
     
     
@@ -105,27 +103,33 @@ public final class Conta {
     
     public void fecharConta(){
         if (this.getSaldo() < 0){
-            System.out.println("Você precisa pagar seus débitos antes!");
+            JOptionPane.showMessageDialog(null,"Você precisa pagar seus débitos antes!");
+            //System.out.println("Você precisa pagar seus débitos antes!");
         } else if (this.getSaldo() > 0){
-            System.out.println("Você precisa sacar todo seu dinheiro antes!");
+            JOptionPane.showMessageDialog(null, "Você precisa sacar todo seu dinheiro antes!");
+            //System.out.println("Você precisa sacar todo seu dinheiro antes!");
         } else {
-            System.out.println("Sua conta está fechada!");
+            JOptionPane.showMessageDialog(null, "Sua conta foi fechada!");
+            //System.out.println("Sua conta foi fechada");
             this.setStatus(false);
         }
     }
     
-    public void depositar(float valor){
+    public void depositar(double valor){
         if(this.isStatus() == true){
             this.setSaldo(getSaldo() + valor); //this.saldo += valor; 
         } else {
-            System.out.println("Para você depositar você precisa abrir a conta!");
+            JOptionPane.showMessageDialog(null, "Para você depositar você precisa abrir a conta!");
+            //System.out.println("Para você depositar você precisa abrir a conta!");
         }
     }
-    public void sacar(float valor){
-        if(this.isStatus() == true && this.getSaldo() > 0){
+    public void sacar(double valor){
+        if(this.isStatus() == true && this.getSaldo() >= valor){//&& this.getSaldo() >= valor){
             this.setSaldo(getSaldo() - valor); // this.saldo -= valor;
-        } else {
-            System.out.println("Você precisa ter saldo e ter a conta aberta!");
+            JOptionPane.showMessageDialog(null,"Seu saque foi efetuado com sucesso!");
+        } else if(this.getSaldo() < valor){
+            JOptionPane.showMessageDialog(null, "Você precisa ter saldo ou ter a conta aberta!");
+            //System.out.println("Você precisa ter saldo e ter a conta aberta!");
         }
     }
     

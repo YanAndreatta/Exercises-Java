@@ -24,15 +24,15 @@ public class ContaBanco {
       
         String decision = "";
         
-        JOptionPane.showMessageDialog(null, "Bem-vindo ao Banco da casa do caralho!");
+        JOptionPane.showMessageDialog(null, "Bem-vindo ao Banco de Papel");
         conta1.setTipo(JOptionPane.showInputDialog("<html>Você quer abrir uma conta corrente ou uma conta poupança?<br> [CC/CP]</br></html>"));
-        conta1.setDono(JOptionPane.showInputDialog("<html>Qual seu nome?<br>Seu caralhudo</br></html>"));
-        conta1.setNumConta(Integer.parseInt(JOptionPane.showInputDialog("Escolha um número de caralhudo para sua conta caralhuda:")));
+        conta1.setDono(JOptionPane.showInputDialog("<html>Qual seu nome?<br>Completo</br></html>"));
+        conta1.setNumConta(Integer.parseInt(JOptionPane.showInputDialog("Escolha um número para sua conta:"))); // Poderia ser gerado automáticamente;
         decision = (JOptionPane.showInputDialog(null, "Você quer ATIVAR a conta agora? [S/N]"));
-        if ("S".equals(decision)){   
+        if ("S".equals(decision) || "s".equals(decision)){   
             int c, n;
             do {
-                c = Integer.parseInt(JOptionPane.showInputDialog(null,"<html>Banco CASA do caralho!  <br><em>(Aperte 0 para sair ou 1 para continuar!)</em></hmtl>"));
+                c = Integer.parseInt(JOptionPane.showInputDialog(null,"<html>Banco de Papel<br><em>(Aperte 0 para sair ou 1 para continuar!)</em></hmtl>"));
                 
                 if (c == 0){
                     break;
@@ -52,34 +52,24 @@ public class ContaBanco {
                         conta1.fecharConta();
                         break;
                     case 4:
-                       int a = Integer.parseInt(JOptionPane.showInputDialog("Quanto você quer depositar? "));
+                       double a = Double.parseDouble(JOptionPane.showInputDialog("Quanto você quer depositar? "));
                        conta1.depositar(a);
                        break;
                     case 5:
-                       int b = Integer.parseInt(JOptionPane.showInputDialog("Quanto você quer sacar? "));
+                       double b = Double.parseDouble(JOptionPane.showInputDialog("Quanto você quer sacar? "));
                        conta1.sacar(b);
+                       break;
                     case 6:
                        conta1.pagarMensal();
+                       break;
                     }
                     
                 }
                 
-            
             } while (c != 0);
             
         }
-        
-        
-        
-        //conta1.extratoConta();
-        //while (c != 0) {    
-        //if(c == 0){
-        //    break;
-        //}
-        //conta1.extratoConta();
-        //}
-        
-        
+
     }
     
 }
