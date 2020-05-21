@@ -45,18 +45,17 @@ public class Lutador {
     }
     
     //metodos especiais
-    public Lutador(String no, String na, int id, int vi, int de, int em, 
-                    float al, float pe) {
+    public Lutador(String no, String na, int id, float al, float pe, int vi, int de, int em) {
         this.nome = no;
         this.nacionalidade = na;
         this.idade = id;
+        this.setPeso(pe);
         this.vitorias = vi;
         this.derrotas = de;
         this.empates = em;
         this.altura = al;
-        this.peso = pe;
-    }
-
+        
+    }        
     public String getNome() {
         return nome;
     }

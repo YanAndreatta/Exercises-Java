@@ -16,6 +16,11 @@ public class Aula07UEF {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Lutador l = new Lutador[6];
+                
+        lnew Lutador("Pretty boy", "França", 31, 1.75f, 68.9f, 11, 2, 1);
+        
+        l.status();
     }
     
 }
