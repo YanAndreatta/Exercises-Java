@@ -31,7 +31,10 @@ public class Aula07UEF {
         l[5] = new Lutador("Nerdaart","EUA", 30, 1.81f, 105.7f, 12, 2, 4);
         
         
-        l[0].status();
+        l[3].empatarLuta();
+        l[3].ganharLuta();
+        l[3].status();
+        l[3].setPeso(10f);
         
     }
     
