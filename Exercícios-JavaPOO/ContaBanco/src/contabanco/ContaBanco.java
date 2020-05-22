@@ -32,7 +32,7 @@ public class ContaBanco {
         if ("S".equals(decision) || "s".equals(decision)){   
             int c, n;
             do {
-                c = Integer.parseInt(JOptionPane.showInputDialog(null,"<html>Banco de Papel<br><em>(Aperte 0 para sair ou 1 para continuar!)</em></hmtl>"));
+                c = Integer.parseInt(JOptionPane.showInputDialog(null,"<html>Banco de Papel<br><em>(Aperte 0 para sair ou 1 para continuar!)</em></html>"));
                 
                 if (c == 0){
                     break;
