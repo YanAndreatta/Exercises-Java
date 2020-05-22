@@ -41,7 +41,28 @@ public class Luta {
             
             Random aleatorio = new Random();
             int vencedor = aleatorio.nextInt(3); // PARAMOS 10:45 JAVA#08b
-            
+            switch(vencedor){
+                
+                case 0: // Empate
+                    System.out.println("===== Resultado =====");
+                    System.out.println("Empatou!");
+                    this.desafiado.empatarLuta();
+                    this.desafiante.empatarLuta();
+                    break;
+                case 1: // Desafiado vence
+                    System.out.println("===== Resultado =====");
+                    System.out.println("Vitória do " + this.desafiado.getNome());
+                    this.desafiado.ganharLuta();
+                    this.desafiante.perderLuta();
+                    break;
+                case 2: // Desafiante vence
+                    System.out.println("===== Resultado =====");
+                    System.out.println("Vitória do " + this.desafiante.getNome());
+                    this.desafiante.ganharLuta();
+                    this.desafiado.perderLuta();
+                    break;
+            }
+            System.out.println("=========================");
         } else{
             System.out.println("A luta não pode acontecer!");
         }
