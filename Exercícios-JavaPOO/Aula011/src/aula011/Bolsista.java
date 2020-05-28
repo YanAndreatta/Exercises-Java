@@ -27,5 +27,10 @@ public class Bolsista extends Aluno {
     public void setBolsa(float bolsa) {
         this.bolsa = bolsa;
     }
+
+    @Override
+    public String toString() {
+        return "Bolsista{" + "bolsa=" + bolsa + '}';
+    }
     
 }
