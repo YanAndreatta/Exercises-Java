@@ -24,12 +24,8 @@ public class Main {
 		
 		System.out.println(b);
 		
-		
-		
-		
-		
-		
-		
+							
+				
 		/*
 		int a, b;
 		double resultado;
