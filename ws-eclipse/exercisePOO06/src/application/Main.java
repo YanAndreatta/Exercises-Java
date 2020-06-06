@@ -8,7 +8,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner t = new Scanner(System.in);
+		
+		Scanner t = new Scanner(System.in); 
 		Employee employee1 = new Employee();
 		System.out.print("Name: ");
 		employee1.setName(t.nextLine());
@@ -26,6 +27,7 @@ public class Main {
 		System.out.printf("Updated data: " + employee1);
 		
 		t.close();
+		
 	}
 
 }
