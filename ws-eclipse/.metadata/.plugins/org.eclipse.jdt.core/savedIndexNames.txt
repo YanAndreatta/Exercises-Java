@@ -1,6 +1,1 @@
 INDEX VERSION 1.131+D:\MeusProjetos\Exercises-Java\ws-eclipse\.metadata\.plugins\org.eclipse.jdt.core
-301102055.index
-4132069088.index
-1727349617.index
-103991956.index
-1899362818.index
