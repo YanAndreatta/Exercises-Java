@@ -1,36 +1,56 @@
-/Exercicíos-Java/IdadeDias/nbproject/private/
-/Exercicíos-Java/IdadeDias/build/
-/Exercicíos-Java/IdadeDias/dist/
-/Exercícios-JavaPOO/OlaMundo/nbproject/private/
-/Exercícios-JavaPOO/OlaMundo/build/
-/Exercícios-JavaPOO/Aula02/nbproject/private/
-/Exercícios-JavaPOO/Aula02/build/
-/Exercícios-JavaPOO/ExercícioPOO/nbproject/private/
-/Exercícios-JavaPOO/ExercícioPOO/build/
-/Exercícios-JavaPOO/Aula03/nbproject/private/
-/Exercícios-JavaPOO/Aula03/build/
-/Exercícios-JavaPOO/Aula04/nbproject/private/
-/Exercícios-JavaPOO/Aula04/build/
-/Exercícios-JavaPOO/ContaBanco/nbproject/private/
-/Exercícios-JavaPOO/ContaBanco/build/
-/Exercícios-JavaPOO/ContaBancoV2-Swing/nbproject/private/
-/Exercícios-JavaPOO/ContaBanco/dist/
-/Exercícios-JavaPOO/ExercicioContaBanco/nbproject/private/
-/Exercícios-JavaPOO/ExercicioContaBanco/build/
-/Exercícios-JavaPOO/Aula06/nbproject/private/
-/Exercícios-JavaPOO/Aula06/build/
-/Exercícios-JavaPOO/Aula07UEF/nbproject/private/
-/Exercícios-JavaPOO/Aula07UEF/build/
-/Exercícios-JavaPOO/PraticaPOOLutador/nbproject/private/
-/Exercícios-JavaPOO/ExercisePOO#09b/nbproject/private/
-/Exercícios-JavaPOO/ExercisePOO#09b/build/
-/Exercícios-JavaPOO/ProjetoPessoas/nbproject/private/
-/Exercícios-JavaPOO/ProjetoPessoas/build/
-/Exercícios-JavaPOO/Aula011/nbproject/private/
-/Exercícios-JavaPOO/Aula011/build/
-/Exercícios-JavaPOO/Aula012/nbproject/private/
-/Exercícios-JavaPOO/Aula012/build/
-/Exercícios-JavaPOO/Aula013/nbproject/private/
-/Exercícios-JavaPOO/Aula013/build/
-/Exercícios-JavaPOO/ProjetoFinal/nbproject/private/
-/Exercícios-JavaPOO/ProjetoFinal/build/
+#
+# Project specific excludes
+#
+
+tomcat
+
+#
+# Default excludes
+#
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+# Maven 
+target/
+
+# IntelliJ project files 
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# eclipse project file
+.settings/
+.classpath
+.project
+
+# NetBeans specific
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+
+# OS
+.DS_Store
+
+# Misc
+*.swp
+release.properties
+pom.xml.releaseBackup
+pom.xml.tag
