@@ -6,8 +6,6 @@ public class Product {
 	private Double price;
 	
 	//Constructors
-	public Product() {
-	}
 
 	public Product(String name, Double price) {
 		this.name = name;
@@ -29,6 +27,15 @@ public class Product {
 
 	public void setPrice(Double price) {
 		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(getName() + ", ");
+		sb.append("$" + getPrice() + ",");
+		return sb.toString();
+				
 	}
 	
 	

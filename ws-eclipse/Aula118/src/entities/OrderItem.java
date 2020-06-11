@@ -34,10 +34,28 @@ public class OrderItem {
 		this.price = price;
 	}
 	
+	public Product getProduct() {
+		return product;
+	}
+	
+	public void setProduct(Product product) {
+		this.product =  product;
+	}
+	
 	//methods
 	
-	public double subTotal(double subTotal) {
-		return subTotal;
+	public double subTotal() {
+		return getQuantity() * getPrice();
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(product);
+		sb.append(" Quantity: " + getQuantity() + ",");
+		sb.append(" Subtotal: $" + String.format("%.2f", subTotal()));
+		return sb.toString();
+	}
+	
 	
 }
