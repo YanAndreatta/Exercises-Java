@@ -1,4 +1,3 @@
-/.metadata/
 #
 # Project specific excludes
 #
@@ -36,6 +35,7 @@ target/
 .settings/
 .classpath
 .project
+.metadata/
 
 # NetBeans specific
 nbproject/private/
