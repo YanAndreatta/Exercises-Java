@@ -2,5 +2,5 @@
 //org.eclipse.ui.commands/state/org.eclipse.wst.xml.views.XPathView.processor.xpathprocessor/org.eclipse.ui.commands.radioState=xpath10
 PLUGINS_NOT_ACTIVATED_ON_STARTUP=;org.eclipse.m2e.discovery;
 SAVE_AUTOMATICALLY=true
-SAVE_AUTOMATICALLY_INTERVAL=1
+SAVE_AUTOMATICALLY_INTERVAL=2
 eclipse.preferences.version=1
