@@ -28,6 +28,6 @@ public class Employee implements Comparable<Employee> {
 
 	@Override
 	public int compareTo(Employee other) {
-		return -salary.compareTo(other.getSalary()); // Pode order por name ou salary. (crescente, se quiser decrescente colocar - na frente do primeiro argumento)
+		return -salary.compareTo(other.getSalary()); // Pode ordenar por name ou salary. (crescente; se quiser decrescente colocar '-' na frente do primeiro argumento)
 	}
 }
